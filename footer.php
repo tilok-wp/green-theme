@@ -1,4 +1,4 @@
-<?php
+<?php  global $green_theme_global;
 ?>
 
     <!-- Start foorter -->
@@ -19,13 +19,7 @@
       <div class="footer-bottom">
         <div class="container">
           <div class="footer-copywright">
-
-            <p>&copy;2019 All right reserved</p>
-            <ul>
-              <li><a href="#">Site map</a></li>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
+          <?php echo $green_theme_global['copywrigt_text'] ?>
           </div>
 
         </div>

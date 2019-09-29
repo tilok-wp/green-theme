@@ -10,7 +10,7 @@
     }
 
     // This is your option name where all the Redux data is stored.
-    $opt_name = "green_theme";
+    $opt_name = "green_theme_global";
 
     /**
      * ---> SET ARGUMENTS
@@ -32,8 +32,8 @@
         //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
         'allow_sub_menu'       => true,
         // Show the sections below the admin menu item or not
-        'menu_title'           => __( 'Green Theme Options', 'green-theme' ),
-        'page_title'           => __( 'Green Theme Options', 'green-theme' ),
+        'menu_title'           => __( 'Green Theme Options', 'green_theme' ),
+        'page_title'           => __( 'Green Theme Options', 'green_theme' ),
         // You will need to generate a Google API key to use this feature.
         // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
         'google_api_key'       => '',
@@ -139,13 +139,13 @@
         } else {
             $v = str_replace( '-', '_', $args['opt_name'] );
         }
-        $args['intro_text'] = sprintf( __( '<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'green-theme' ), $v );
+        $args['intro_text'] = sprintf( __( '<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'green_theme' ), $v );
     } else {
-        $args['intro_text'] = __( '<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'green-theme' );
+        $args['intro_text'] = __( '<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'green_theme' );
     }
 
     // Add content after the form.
-    // $args['footer_text'] = __( '<p>This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.</p>', 'green-theme' );
+    // $args['footer_text'] = __( '<p>This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.</p>', 'green_theme' );
 
     Redux::setArgs( $opt_name, $args );
 
@@ -160,19 +160,19 @@
     $tabs = array(
         array(
             'id'      => 'redux-help-tab-1',
-            'title'   => __( 'Theme Information 1', 'green-theme' ),
-            'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'green-theme' )
+            'title'   => __( 'Theme Information 1', 'green_theme' ),
+            'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'green_theme' )
         ),
         array(
             'id'      => 'redux-help-tab-2',
-            'title'   => __( 'Theme Information 2', 'green-theme' ),
-            'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'green-theme' )
+            'title'   => __( 'Theme Information 2', 'green_theme' ),
+            'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'green_theme' )
         )
     );
     Redux::setHelpTab( $opt_name, $tabs );
 
     // Set the help sidebar
-    $content = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'green-theme' );
+    $content = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'green_theme' );
     Redux::setHelpSidebar( $opt_name, $content );
 
 
@@ -226,26 +226,6 @@
             )
         )
     ) );
-    
-    // Redux::setSection( $opt_name, array(
-    //     'title'      => ( 'Section Setting'),
-    //     'id'         => 'section_setting',
-    //     'subsection' => true,
-    //     'fields'     => array (
-    //         array(
-    //             'id'    => 'section_setting_opt',
-    //             'desc'  =>  'Header massage text',
-    //             'type'  => 'sorter',
-    //             'options' => array(
-    //                 'Active' => array(
-    //                     'hero_section' => 'Hero Section',
-    //                 ),
-    //                 'Deactive' => array(
-    //                    'name' => 'Nmae' 
-    //                 )
-    //             )
-    //         )
-    // ) );
     
     Redux::setSection( $opt_name, array(
         'title'      => ( 'Header Options'),
@@ -315,8 +295,10 @@
             )
         )
     ) );
+
+    //Footer bottom options
     Redux::setSection( $opt_name, array(
-        'title'      => ( 'Footer Options'),
+        'title'      => ( 'Footer bottom Options'),
         'id'         => 'footer_option',
         'desc'       => 'This field use for header elements',
         'icon'       => 'el el-bag'
@@ -331,7 +313,7 @@
                 'id'    => 'copywrigt_text',
                 'desc'  =>  'Input Copy Wright Text',
                 'type'  =>  'editor',
-                'default' => '© 2019 Copyright AuTheme. All right reserved.'
+                'default' => ' &copy;2019 Copyright GreenTheme. All right reserved.'
             ),
         )
     ) );

@@ -1021,6 +1021,7 @@ transition: (transform 2s ease, opacity .5s ease-out)
 	height: 6rem;
 	width: auto;
 	margin-right: 1rem;
+	max-width: 100%;
 }
 .single-footer> a {
     border: 1px solid #fff;
@@ -1051,6 +1052,24 @@ transition: (transform 2s ease, opacity .5s ease-out)
 	border: .5rem solid transparent;
 	border-left-color: #6f6f6f;
 }
+.footer-carousel img {
+	height: auto;
+}
+.single-footer .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.single-footer .gallery .gallery-item {
+	width: 32%;
+}
+.single-footer .gallery .gallery-item img {
+	width: auto;
+	height: auto;
+}
+
+
+
 .footer-bottom {
 	background: #000;
 	padding: 10px 0;

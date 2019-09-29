@@ -31,6 +31,7 @@
         });
 
     //owlCarousel
+
     $(".testimonial-carousel").owlCarousel({
         loop: true,
         margin:30,
@@ -92,9 +93,16 @@
             }
         }
     });
-    $(".footer-carousel").owlCarousel({
+    //footer bootstrap col change
+    if ( !$('.footer-top .col-md-2.col-md-3').removeClass("col-md-3")) {}
+    if ( !$('.footer-top .col-md-1.col-md-3').removeClass("col-md-3")) {}
+    // footer carousel
+    if ( !$('.footer-carousel .textwidget').addClass("footer-owl-carousel owl-carousel")) {
+
+    }
+
+    $(".footer-owl-carousel").owlCarousel({
         loop: true,
-        margin:30,
         nav: false,
         dots: false,
         autoplay: true,
