@@ -308,7 +308,7 @@ a.to-top {
 	transform: scaleX(1);
 	color: #232323;
 }
-.main-menu ul li.has-children:hover:after {
+.main-menu ul li.menu-item-has-children:hover:after {
 	transform: scaleX(0);
 }
 
@@ -332,7 +332,7 @@ a.to-top {
     border-radius: .5rem;
 }
 
-.main-menu .has-children .sub-menu {
+.main-menu .menu-item-has-children .sub-menu {
     display: block;
     position: absolute;
     background: #F7F7F7;
@@ -347,7 +347,7 @@ a.to-top {
 }
 
 @media only screen and (max-width: 767px) {
-	.main-menu .has-children .sub-menu {
+	.main-menu .menu-item-has-children .sub-menu {
 		display: none;
 		position: relative;
 		padding: 0 1.5rem;
@@ -360,11 +360,11 @@ a.to-top {
 	transform: scaleY(1);
 	display: block;
 }
-.main-menu ul li.has-children>a {
+.main-menu ul li.menu-item-has-children>a {
 	position: relative;
 	padding-right: 3rem;
 }
-.main-menu ul li.has-children>a:before {
+.main-menu ul li.menu-item-has-children>a:before {
     position: absolute;
     content: "\f107";
     font-family: "Font Awesome 5 Free";
@@ -388,7 +388,7 @@ a.to-top {
 	color: #232323;
 	background: transparent;
 }
-.main-menu .has-children .sub-menu .sub-menu {
+.main-menu .menu-item-has-children .sub-menu .sub-menu {
 	top: 0;
 	left: 0;
 	transform-origin: top;
@@ -396,11 +396,11 @@ a.to-top {
     transform: scale(0);
 }
 @media only screen and (max-width: 767px) {
-	.main-menu .has-children .sub-menu .sub-menu {
+	.main-menu .menu-item-has-children .sub-menu .sub-menu {
 		display: none;
 	}
 }
-.main-menu .has-children .sub-menu .has-children:hover .sub-menu {
+.main-menu .menu-item-has-children .sub-menu .menu-item-has-children:hover .sub-menu {
 	transform: scale(1);
 	opacity: 1;
 	left: 100%; 
@@ -511,6 +511,20 @@ a.to-top {
 	cursor: pointer;
 }
 .serarch-form a:hover {
+	background-color: #232323;
+	color: #fff!important;
+}
+.serarch-form button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #fff;
+    height: 100%;
+    width: 15%;
+    font-size: 2rem;
+}
+.serarch-form button:hover {
 	background-color: #232323;
 	color: #fff!important;
 }
@@ -998,8 +1012,9 @@ transition: (transform 2s ease, opacity .5s ease-out)
 	background: #232323;
 	padding: 8rem 0 3rem;
 }
-.footer-top h3 {
+.footer-top h4 {
 	color: #f1f1f1;
+	font-size: 2rem;
 	margin-bottom: 1.5rem;
 }
 .single-footer img {
