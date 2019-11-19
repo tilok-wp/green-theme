@@ -7,5 +7,7 @@
     include_once('inc/extra_functions.php');
     include_once('inc/redux-framework/redux-framework.php');
     include_once('inc/redux-green-theme-custom-config.php');
+    include_once('inc/social-icon_widget.php');
+    require_once('inc/plugin_auto_activation.php');
 
     

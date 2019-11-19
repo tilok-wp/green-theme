@@ -195,37 +195,38 @@
      */
 
     // -> START Greentheme fields Fields
-    Redux::setSection( $opt_name, array(
-        'title'      => ( 'Section Active / Inactive / Shorter Options'),
-        'id'         => 'page_shorter_option',
-        'desc'       => 'This field use Section Active / Inactive / Shorter Setting',
-        'icon'       => 'el el-view-mode'
-    ) );
-    Redux::setSection( $opt_name, array(
-        'title'      => ( 'Header Follow'),
-        'id'         => 'section_sort__a',
-        'subsection' => true,
-        'fields'     => array (
-            array(
-                'id'    => 'section_sorter_opt',
-                'desc'  =>  'Section Sort',
-                'type'  =>  'sorter',
-                'options' => array(
-                    'Active' => array(
-                        'hero' => 'Hero Section',
-                        'about' => 'About Section',
-                        'service' => 'Service Section',
-                        'counterup' => 'Counter Section',
-                        'gallery' => 'Gallery Section',
-                        'claient' => 'Claient Section',
-                        'testimontal' => 'Testimontal Section',
-                    ),
-                    'Deactive' =>array(
-                    ),
-                )       
-            )
-        )
-    ) );
+
+    // Redux::setSection( $opt_name, array(
+    //     'title'      => ( 'Section Active / Inactive / Shorter Options'),
+    //     'id'         => 'page_shorter_option',
+    //     'desc'       => 'This field use Section Active / Inactive / Shorter Setting',
+    //     'icon'       => 'el el-view-mode'
+    // ) );
+    // Redux::setSection( $opt_name, array(
+    //     'title'      => ( 'Header Follow'),
+    //     'id'         => 'section_sort__a',
+    //     'subsection' => true,
+    //     'fields'     => array (
+    //         array(
+    //             'id'    => 'section_sorter_opt',
+    //             'desc'  =>  'Section Sort',
+    //             'type'  =>  'sorter',
+    //             'options' => array(
+    //                 'Active' => array(
+    //                     'hero' => 'Hero Section',
+    //                     'about' => 'About Section',
+    //                     'service' => 'Service Section',
+    //                     'counterup' => 'Counter Section',
+    //                     'gallery' => 'Gallery Section',
+    //                     'claient' => 'Claient Section',
+    //                     'testimontal' => 'Testimontal Section',  
+    //                 ),
+    //                 'Deactive' =>array(
+    //                 ),
+    //             )       
+    //         )
+    //     )
+    // ) );
     
     Redux::setSection( $opt_name, array(
         'title'      => ( 'Header Options'),
@@ -234,7 +235,7 @@
         'icon'       => 'el el-home'
     ) );
     Redux::setSection( $opt_name, array(
-        'title'      => ( 'Header Top Massage'),
+        'title'      => ( 'Header Top info'),
         'id'         => 'header_top',
         'subsection' => true,
         'fields'     => array (
@@ -242,43 +243,12 @@
                 'id'    => 'header_top_text',
                 'desc'  =>  'Header massage text',
                 'url'   => true,
-                'type'  =>  'text',
-                'default' => 'Best services quality for customers.'          
+                'type'  =>  'editor',
+                'default' => 'Email: <a href="mailto:yourmail@mail.com">yourmail@mail.com</a>'      
             )
         )
     ) );
-    Redux::setSection( $opt_name, array(
-        'title'      => ( 'Header Follow'),
-        'id'         => 'header_follow',
-        'subsection' => true,
-        'fields'     => array (
-            array(
-                'id'    => 'header_follow_text',
-                'desc'  =>  'Header follow text',
-                'url'   => true,
-                'type'  =>  'text',
-                'default' => 'Follow Us :'          
-            )
-        )
-    ) );
-    Redux::setSection( $opt_name, array(
-        'title'      => ( 'Header Top Social'),
-        'id'         => 'header_top_socaial',
-        'subsection' => true,
-        'fields'     => array (
-            array(
-                'id'    => 'header_top_social',
-                'desc'  =>  'Social Input',
-                'url'   => true,
-                'type'  => 'slides',
-                'placeholder' => array (
-                    'title' => 'Input Icon Class Name',
-                    'url'   => 'Input Social URL here',
-                    'description'  => 'No need input anything ',
-                )
-            )
-        )
-    ) );
+
     Redux::setSection( $opt_name, array(
         'title'      => ( 'Logo options'),
         'id'         => 'header_sub',
@@ -295,7 +265,39 @@
             )
         )
     ) );
+    Redux::setSection( $opt_name, array(
+        'title'      => ( 'Text logo option'),
+        'id'         => 'text_logo_options',
+        'subsection' => true,
+        'fields'     => array (
+            array(
+                'id'    => 'text_logo',
+                'desc'  =>  'Logo text input',
+                'type'  =>  'text',
+                'default' => 'Logo'      
+            )
+        )
+    ) );
 
+    Redux::setSection( $opt_name, array(
+        'title'      => ( 'Client carousel Options'),
+        'id'         => 'claient_carousel',
+        'desc'       => 'This field use for header elements',
+        'icon'       => 'el el-th-large'
+    ) );
+    Redux::setSection( $opt_name, array(
+        'title'      => ( 'Client carousel images'),
+        'id'         => 'claient_carousel_img',
+        'subsection' => true,
+        'fields'     => array (
+            array(
+                'id'    => 'claient_carousel_images',
+                'desc'  =>  'Input crousel images',
+                'url'   => true,
+                'type'  =>  'gallery'     
+            )
+        )
+    ) );
     //Footer bottom options
     Redux::setSection( $opt_name, array(
         'title'      => ( 'Footer bottom Options'),

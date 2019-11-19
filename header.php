@@ -1,4 +1,4 @@
-<?php ?>
+<?php  global $green_theme_global; ?>
 
 <!DOCTYPE html>
   <html lang="en">
@@ -17,7 +17,7 @@
       <![endif]-->
   </head>
 
-  <body>
+  <body <?php body_class(); ?> >
     <!-- Start header  -->
     <header class="header" id="home-top">
       <div class="header-top-bar">
@@ -25,17 +25,12 @@
           <div class="row">
             <div class="top-wraper">
               <div class="top-left">
-                Email: <a href="mailto:yourmail@mail.com">yourmail@mail.com</a>
+                <?php echo $green_theme_global['header_top_text'] ?>
               </div>
               <div class="top-right">
                 Socials:
                 <div class="socials-icon">
-                  <ul>
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fab fa-github"></i></a></li>
-                  </ul>
+                  <?php if(! dynamic_sidebar( 'social_widget' )) ?>
                 </div>
               </div>
 
@@ -49,10 +44,9 @@
             <div class="row">
               <div class="col-md-2 order-md-1">
                 <div class="logo-box">
-                  <a href="#">
-                    <img src="assets/images/logo/logoone.jpg" alt="" class="main-logo">
-                    <img src="assets/images/logo/logoone.jpg" alt="" style="display: none;" class="scroll-logo">
-                    <!-- <h1 class="text-logo">Logo</h1> -->
+                  <a href="<?php echo site_url(); ?>">
+                    <img src="<?php echo($green_theme_global['site_logo']['url']) ?>" alt="<?php echo($green_theme_global['site_logo']['alt']) ?>" class="main-logo">
+                    <!-- <h1 class="text-logo"><?php echo($green_theme_global['text_logo']) ?></h1> -->
                   </a>
                   <a class="manubar-toggler">
                     <i class="fas fa-times"></i>

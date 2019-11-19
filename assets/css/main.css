@@ -69,6 +69,9 @@ h6 {
 	padding: 8rem 0;
 }
 
+.pageSection-padding {
+	padding: 12rem 0 10rem;
+}
 .read-button a {
 	color: #6f6f6f;
 }
@@ -92,6 +95,9 @@ bottom: 0;
 top: 0;
 background: rgba(0, 0, 0, .6);
 z-index: -1;
+}
+.bg-dark {
+	background: #232323;
 }
 
 /* Preloder CSS start */
@@ -250,9 +256,15 @@ a.to-top {
 .logo-box {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+	justify-content: flex-start;
+	height: 100%;
 }
 
+.logo-box h1 {
+    color: #fff;
+    height: 100%;
+    font-size: 4rem;
+}
 .logo-box img {
     height: 8rem;
 }
@@ -651,70 +663,46 @@ transition: (transform 2s ease, opacity .5s ease-out)
 /* End hero css */
 
 /* Start services css */
-.services .section-heading {
-    background: #232323;
-    text-align: center;
-    padding: 1.5rem 0;
-}
-.services .section-heading h3 {
-	color: #fff;
 
-}
-.services .col-md-4:nth-child(2) .single-service {
-	background: #232323;
-}
-.services .col-md-4 {
-	padding: 0;
-}
-.services .col-md-4:nth-child(1) .single-service,
-.services .col-md-4:nth-child(3) .single-service {
-	background: #282828;
-}
 .single-service {
 	padding: 1.5rem;
+	height: 100%;
+	box-shadow: 0 0 15px;
+    border-radius: 5px;
 }
 .service-icon {
     text-align: center;
     padding: 1rem;
+    margin-bottom: 1rem;
+}
+.service-icon img {
+	height: 10rem;
+	width: auto;
 }
 .service-icon i {
 	font-size: 5rem;
-	color: #fff;
 }
 .service-text h3 {
 	font-size: 2.2rem;
-	color: #fff;
 	margin-bottom: 1.5rem;
 }
 .service-text p {
-	color: #f1f1f1;
 	margin-bottom: 1rem;
 }
 
 .service-text a {
-	color: #f1f1f1;
 	padding: .8rem 1.5rem;
 	border-radius: .5rem; 
 	margin-bottom: 1.5rem;
 	display: inline-block;
-}
-.service-text a:nth-child(3) {
-	color: #f1f1f1;
-	background: orangered;
-}
-.service-text a:nth-child(4) {
-	color: #f1f1f1;
-	background: yellowgreen;
-}
-.service-text a:nth-child(5) {
-	color: #232323;
-	background: #fff;
+	border: .1rem solid;
+    color: #333;
+    margin-right: 1rem;
 }
 /* End services css */
+
 /* Start portfolio css */
-.portfolio {
-	background: #232323;
-}
+
 .portfolio .section-heading h3{
 	color: #fff;
 }
@@ -723,6 +711,7 @@ transition: (transform 2s ease, opacity .5s ease-out)
 .tab-button-list a {
 	border: none!important;
 	color: #7e7e7e;
+	text-transform: capitalize;
 }
 .tab-button-list {
     margin: 0 auto 3rem;
@@ -737,6 +726,7 @@ transition: (transform 2s ease, opacity .5s ease-out)
 	position: relative;
 	overflow: hidden;
 	margin-bottom: 3rem;
+	box-shadow: 0 0 1rem;
 }
 
 .porfolio-details {
@@ -789,7 +779,8 @@ transition: (transform 2s ease, opacity .5s ease-out)
 }
 
 .portfolio_box img {
-	width: 100%;
+    height: 28rem;
+    max-width: 100%;
 }
 /* End portfolio css */
 /* Start about css */
@@ -894,36 +885,19 @@ transition: (transform 2s ease, opacity .5s ease-out)
 	margin-bottom: 3rem;
 }
 
+
 .single-blog img {
 	transform: scale(1);
 	transition: .3s;
+	height: auto!important;
 }
 .single-blog:hover img {
 	transform: scale(1.2);
 }
 .blog-details {
     position: relative;
-    padding-left: 2.5rem;
 }
 
-.blog-details:before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: .3rem;
-    background-color: #f6f6f6;
-}
-.blog-details:after {
-    position: absolute;
-    content: "";
-    width: .3rem;
-    height: 8rem;
-    top: 0;
-    left: 0;
-    background-color: #6f6f6f;
-}
 .blog-details ul {
     list-style: none;
     display: flex;
@@ -1105,7 +1079,6 @@ transition: (transform 2s ease, opacity .5s ease-out)
 	align-items: center;
 	background-size: cover;
 	background-position: center;
-	background-image: url(../images/hero/hero-3.jpg);
 	position: relative;
 	z-index: 1;
 }
@@ -1406,9 +1379,11 @@ p span {
 /* End testimonial css */
 
 /* Start blog page css */
-.blogimage {
+.blog .single-blog .blogimage {
+	max-height: 40rem;
 	width: 100%;
 }
+
 .share-option {
 	position: absolute;
 	right: 1.5rem;
@@ -1440,4 +1415,5 @@ p span {
 }
 
 /* End blog page css */
+
 

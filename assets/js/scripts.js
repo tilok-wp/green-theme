@@ -96,6 +96,16 @@
     //footer bootstrap col change
     if ( !$('.footer-top .col-md-2.col-md-3').removeClass("col-md-3")) {}
     if ( !$('.footer-top .col-md-1.col-md-3').removeClass("col-md-3")) {}
+    if ( !$('.footer-top .col-md-4.col-md-3').removeClass("col-md-3")) {}
+    if ( !$('.footer-top .col-md-5.col-md-3').removeClass("col-md-3")) {}
+    if ( !$('.footer-top .col-md-6.col-md-3').removeClass("col-md-3")) {}
+    if ( !$('.footer-top .col-md-7.col-md-3').removeClass("col-md-3")) {}
+    if ( !$('.footer-top .col-md-8.col-md-3').removeClass("col-md-3")) {}
+    if ( !$('.footer-top .col-md-9.col-md-3').removeClass("col-md-3")) {}
+    if ( !$('.footer-top .col-md-10.col-md-3').removeClass("col-md-3")) {}
+    if ( !$('.footer-top .col-md-11.col-md-3').removeClass("col-md-3")) {}
+    if ( !$('.footer-top .col-md-12.col-md-3').removeClass("col-md-3")) {}
+    
     // footer carousel
     if ( !$('.footer-carousel .textwidget').addClass("footer-owl-carousel owl-carousel")) {
 
